@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Made with Peel.js by @andrewplummer (https://andrewplummer.github.io/peel-js/) -->
+	<title>thank you</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Chivo&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="src/peel.css">
+	<script src="src/peel.js"></script>
+	<style type="text/css">
+		.container {
+			width: 90%;
+			margin: 15% auto;
+	    	font-family: 'Chivo', sans-serif;
+		}
+		.peel {
+			height: 200px;
+			width: 200px;
+			margin: 25px auto;
+			text-align: center;
+		}
+
+		.peel p {
+			margin: 45px;
+		}
+
+		.heart {
+		  /*line-height: 150px;*/
+		}
+
+		.heart .peel-bottom {
+			background-color: #ebeff2;
+		}
+
+		.heart .peel-top {
+		  background-color: #F05B7A;
+		}
+
+		.heart .peel-back {
+		  background-color: #ed8484;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">			
+		<div id="heart-drag" class="heart peel">
+		  <div class="peel-top"><p>Peel me!<br>&#129047;</p></div>
+		  <div class="peel-back"></div>
+		  <div class="peel-bottom"><p>Thank you!<br>With love,<br><a href="https://www.forem.com/future/">Team Forem</a></p></div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var p = new Peel('#heart-drag', {
+		  path: {
+		    d: 'M101.260605,31.4241113 C122.403839,-11.2687842 173.108983,1.11145064 183.007355,11.8447551 C237.311569,70.7295532 142.521446,119.347653 101.260608,174.571349 C51.8099036,119.347653 -39.0680406,68.307428 18.4502396,11.8447553 C33.183089,-2.61770866 77.7850024,-11.2687842 101.260605,31.4241113 Z'
+		  }
+		});
+		p.setCorner(101, 175);
+		p.handleDrag(function(evt, x, y) {
+		  this.setPeelPosition(x, y);
+		});
+	</script>
+</body>
+</html>
