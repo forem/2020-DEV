@@ -395,10 +395,12 @@
       }
       moveName = touch ? 'touchmove' : 'mousemove';
       endName  = touch ? 'touchend' : 'mouseup';
-
       addEvent(docEl, moveName, dragMove);
       addEvent(docEl, endName, dragEnd);
       isDragging = false;
+      setTimeout(function() {
+        document.getElementById('under-message').classList.add('under-message-visible')
+      }, 500)
     }
 
     function dragMove (evt) {

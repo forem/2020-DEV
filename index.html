@@ -36,19 +36,40 @@
 
 		.heart .peel-top {
 		  background-color: #F05B7A;
+			padding-top: 24px;
+			font-weight: bold;
 		}
 
 		.heart .peel-back {
 		  background-color: #ed8484;
+		}
+		.under-message {
+			text-align: center;
+			margin-top: 100px;
+			opacity: 0;
+			transition: opacity 3s ease-in-out;
+			-moz-transition: opacity 3s ease-in-out;
+			-webkit-transition: opacity 3s ease-in-out;
+		}
+		.under-message-visible {
+			opacity: 1;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">			
 		<div id="heart-drag" class="heart peel">
-		  <div class="peel-top"><p>Peel me!<br>&#129047;</p></div>
+		  <div class="peel-top"><p>Peel me!</p></div>
 		  <div class="peel-back"></div>
-		  <div class="peel-bottom"><p>Thank you!<br>With love,<br><a href="https://www.forem.com/future/">Team Forem</a></p></div>
+		  <div class="peel-bottom"><p>Thank you for being part of DEV</p></div>
+		</div>
+		<div id="under-message" class="under-message">
+			<p>
+				Here's to community, transparency and accessibility in 2021.
+			</p>
+			<p>
+				<a href="https://www.forem.com/future/">The Forem Team is with you</a>
+			</p>
 		</div>
 	</div>
 	<script type="text/javascript">
